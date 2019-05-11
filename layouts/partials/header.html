@@ -1,7 +1,7 @@
 {{ $colorScheme := default "light" .Site.Params.header.colorScheme }}
 
 <header class="blog-header">
-    <nav class="navbar navbar-expand-md navbar-{{ $colorScheme }} bg-{{ $colorScheme }}">
+    <nav class="navbar navbar-{{ $colorScheme }} bg-{{ $colorScheme }}">
         <div class="container">
             <a class="navbar-brand" href="{{ .Site.BaseURL | relLangURL }}">
                 {{ partial "brand" . }}
