@@ -57,3 +57,7 @@ aside ul.seealso {
 aside a {
   color: #6c757d;
 }
+
+aside .section.sns_parent a:hover {
+  text-decoration: none;
+}
