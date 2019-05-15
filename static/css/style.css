@@ -14,13 +14,13 @@
 .blog-post h1 {
   margin: 1.5rem 0 .3rem;
   color: white;
-  background: #6c757d; 
+  background: var(--secondary); 
   padding: 0.2rem;
 }
 
 .blog-post h2 {
   margin: 1rem 0 .3rem;
-  border-bottom: solid 3px #6c757d;
+  border-bottom: solid 3px var(--secondary);
 }
 
 h2.blog-post-title {
@@ -32,12 +32,12 @@ h2.blog-post-title {
 }
 
 .page-item.active .page-link {
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: var(--secondary);
+  border-color: var(--secondary);
 }
 
 .page-link {
-  color: #6c757d;
+  color: var(--secondary);
 }
 
 a {
@@ -49,17 +49,17 @@ a.text-dark:hover {
 }
 
 .badge-primary {
-  background-color: #6c757d;
+  background-color: var(--secondary);
 }
 
 
 aside ul.seealso {
   padding-left: 30px;
-  color: #6c757d;
+  color: var(--secondary);
 }
 
 aside a {
-  color: #6c757d;
+  color: var(--secondary);
 }
 
 aside .section.sns_parent a:hover {
