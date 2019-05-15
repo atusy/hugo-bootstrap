@@ -62,6 +62,6 @@ aside a {
   color: var(--secondary);
 }
 
-aside .section.sns_parent a:hover {
+aside .sns_share a:hover {
   text-decoration: none;
 }
