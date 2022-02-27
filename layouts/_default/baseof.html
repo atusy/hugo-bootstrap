@@ -29,19 +29,13 @@
     {{ end }}
 
     {{ block "body" . }}
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-8 blog-main">
-
-          {{ block "main" . }}
-          {{ end }}
-
-        </div>
-
-        {{ partial "sidebar.html" . }}
-
-      </div>
-    </div>
+    <main>
+      {{ block "main" . }}
+      {{ end }}
+    </main>
+    <aside>
+      {{ partial "sidebar.html" . }}
+    </aside>
     {{ end }}
 
     {{ block "footer" . }}
