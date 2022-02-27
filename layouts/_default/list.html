@@ -14,7 +14,12 @@
 </section>
 {{ end }}
 
-{{ $paginator := .Paginate (where .Pages "Type" "post") }}
+{{ $pages := .Pages }}
+{{ if .IsHome }}
+{{ $pages = .Site.RegularPages }}
+{{ end }}
+
+{{ $paginator := .Paginate (where $pages "Type" "post") }}
 {{ range $paginator.Pages }}
 
     {{ if $truncate }}
