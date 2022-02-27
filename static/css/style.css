@@ -1,14 +1,18 @@
 body {
-	max-width: 960px
+  max-width: 960px;
 }
 .justify-content-center {
-	text-align: center
+  text-align: center
 }
-.pagination {
+
+.blog-pagination, footer nav {
+  margin: 2.5rem 0;
+}
+.pagination, footer nav ul {
   list-style: none;
   padding: 0;
 }
-.pagination li {
+.pagination li, footer nav li {
   display: inline
 }
 
