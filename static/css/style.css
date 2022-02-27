@@ -1,72 +1,14 @@
-.blog-header, .blog-post, .blog-pagination {
-  margin-bottom: 2rem;
+body {
+	max-width: 960px
+}
+.justify-content-center {
+	text-align: center
+}
+.pagination {
+  list-style: none;
+  padding: 0;
+}
+.pagination li {
+  display: inline
 }
 
-/* Make sure the image size is reasonable. */
-.blog-post img {
-  max-width: 100%;
-}
-
-.blog-post p {
-  line-height: 1.8rem;
-}
-
-.blog-post h1 {
-  margin: 1.5rem 0 .3rem;
-  color: white;
-  background: var(--secondary); 
-  padding: 0.2rem;
-}
-
-.blog-post h2 {
-  margin: 1rem 0 .3rem;
-  border-bottom: solid 3px var(--secondary);
-}
-
-h2.blog-post-title {
-  margin-top: 0;
-}
-
-.blog-post h3 {
-  margin: 1rem 0 .3rem;
-}
-
-.page-item.active .page-link {
-  background-color: var(--secondary);
-  border-color: var(--secondary);
-}
-
-.page-link {
-  color: var(--secondary);
-}
-
-a {
-  color: #0056b3;
-}
-
-a.text-dark:hover {
-  color: #0056b3 !important;
-}
-
-.badge-primary {
-  background-color: var(--secondary);
-}
-
-
-aside ul.seealso {
-  padding-left: 30px;
-  color: var(--secondary);
-}
-
-aside a {
-  color: var(--secondary);
-}
-
-aside .sns_share a:hover {
-  text-decoration: none;
-}
-
-blockquote {
-  border-left: solid 2px #cccccc;
-  padding-left: 1em;
-}
