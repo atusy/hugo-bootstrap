@@ -13,7 +13,7 @@ body {
   vertical-align: text-bottom;
 }
 
-.blog-post-title a, .blog-post-categories a {
+.blog-post-title a,  .blog-post-categories a, .blog-post-tags a {
   color: inherit;
 }
 
