@@ -1,7 +1,8 @@
-{{ $colorScheme := default "light" .Site.Params.header.colorScheme }}
-
 <header class="blog-header">
-      <a class="navbar-brand" href="{{ .Site.BaseURL | relLangURL }}">
-        {{ partial "brand" . }}
-      </a>
+  <h1>
+  <a class="navbar-brand" href="{{ .Site.BaseURL | relLangURL }}" title="{{ default "Top Page" .Site.Title }}">
+    {{ partial "brand" . }}
+  {{ .Site.Title }}
+  </a>
+  </h1>
 </header>

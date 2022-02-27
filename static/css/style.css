@@ -5,6 +5,14 @@ body {
   text-align: center
 }
 
+.blog-header a {
+  color: inherit;
+}
+.blog-header img {
+  margin: 0;
+  vertical-align: text-bottom;
+}
+
 .blog-pagination, footer nav {
   margin: 2.5rem 0;
 }
