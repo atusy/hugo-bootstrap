@@ -13,9 +13,18 @@ body {
   vertical-align: text-bottom;
 }
 
+.blog-post-title a, .blog-post-categories a {
+  color: inherit;
+}
+
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
   background-color: inherit;
   padding: inherit;
+}
+
+
+aside.sidebar a {
+  color: inherit
 }
 
 footer nav, .blog-pagination {
@@ -43,7 +52,8 @@ footer nav li, .page-item {
   display: block;
   padding: 0.5rem 1rem;
 }
-.page-link:hover {
+a.page-link {
+  color: inherit;
   border: none;
 }
 
