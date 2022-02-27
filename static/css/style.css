@@ -13,14 +13,32 @@ body {
   vertical-align: text-bottom;
 }
 
-.blog-pagination, footer nav {
+footer nav, .blog-pagination {
   margin: 2.5rem 0;
 }
-.pagination, footer nav ul {
+footer nav ul, .pagination {
   list-style: none;
   padding: 0;
 }
-.pagination li, footer nav li {
-  display: inline
+footer nav li, .page-item {
+  display: inline-block;
+}
+.page-item, .page-item.disabled:hover {
+  text-align: center;
+  border: solid 1px #ccc;
+  background-color: transparent; 
+}
+.page-item:hover {
+  background-color: #eee 
+}
+.page-item.active {
+  background-color: #ddd
+}
+.page-link {
+  display: block;
+  padding: 0.5rem 1rem;
+ }
+.page-link:hover {
+  border: none;
 }
 
