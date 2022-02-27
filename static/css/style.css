@@ -47,3 +47,8 @@ footer nav li, .page-item {
   border: none;
 }
 
+@media print {
+  aside.sidebar, footer {
+    display: none;
+  }
+}
