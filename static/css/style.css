@@ -22,6 +22,9 @@ h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
   padding: inherit;
 }
 
+#TOC {
+  margin: 3rem;
+}
 
 aside.sidebar a {
   color: inherit
