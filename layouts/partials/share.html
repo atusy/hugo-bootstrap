@@ -3,7 +3,8 @@
   {{ $title = add .Title (add " | " $title) }} 
 {{ end }}
 
-<h4>Share</h4>
+<details open>
+<summary><h4>Share</h4></summary>
 
 <p class="sns_share">
     <a href="//twitter.com/intent/tweet?url={{ .Permalink }}&text={{ $title }}" target="_blank" title="Tweet">
@@ -19,3 +20,4 @@
       <img src="//icongr.am/simple/pocket.svg?size=32px&color=6c757d">
     </a>
 </p>
+</details>

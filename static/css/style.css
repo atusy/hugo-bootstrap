@@ -50,6 +50,14 @@ h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
   margin: 3rem;
 }
 
+summary h4 {
+  display: inline-block;
+  margin: 0;
+}
+details[open] summary h4 {
+  margin-bottom: 1.5rem;
+}
+
 footer nav, .blog-pagination {
   margin: 2.5rem 0;
 }
