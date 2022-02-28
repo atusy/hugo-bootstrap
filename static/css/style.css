@@ -6,12 +6,20 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 body {
-  max-width: 960px;
+  max-width: 56em; 
 }
 .justify-content-center {
   text-align: center
 }
 
+.blog-summary {
+  margin: 6rem 0 3rem 0;
+}
+a:hover {
+  border: none;
+  text-decoration: underline currentColor solid;
+  text-decoration-thickness: 2px;
+}
 #site-header a,
 #site-sidebar a,
 .blog-summary a,
@@ -22,6 +30,9 @@ h2.blog-post-title a {
   margin: 0;
   width: 1.2em;
   vertical-align: text-bottom;
+}
+p img {
+  margin: 0;
 }
 
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
