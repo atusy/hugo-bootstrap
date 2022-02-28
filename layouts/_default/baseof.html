@@ -11,9 +11,9 @@
       {{ end }}
     </title>
 
-    <link href="{{ .Site.BaseURL }}css/sakura.css" rel="stylesheet">
-    <link href="{{ .Site.BaseURL }}css/ibm-plex-sans-jp.min.css" rel="stylesheet">
-    <link href="{{ .Site.BaseURL }}css/style.css" rel="stylesheet">
+    <link href="{{ "css/sakura.css" | relURL }}" rel="stylesheet">
+    <link href="{{ "css/ibm-plex-sans-jp.min.css" | relURL }}" rel="stylesheet">
+    <link href="{{ "css/style.css" | relURL }}" rel="stylesheet">
 
     {{ with .OutputFormats.Get "RSS" }}
     <link href={{ .RelPermalink }} rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
