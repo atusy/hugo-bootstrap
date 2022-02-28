@@ -5,16 +5,13 @@ body {
   text-align: center
 }
 
-.blog-header a {
+#site-header a, .blog-summary a, h2.blog-post-title a {
   color: inherit;
 }
-.blog-header img {
+#site-header img {
   margin: 0;
+  width: 1.2em;
   vertical-align: text-bottom;
-}
-
-.blog-post-title a,  .blog-post-categories a, .blog-post-tags a {
-  color: inherit;
 }
 
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {

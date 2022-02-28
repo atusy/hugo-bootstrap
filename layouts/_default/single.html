@@ -1,11 +1,13 @@
 {{ define "main" }}
 
 <header>
-    {{ partial "post-title" . }}
-    {{ partial "post-date" . }}
-    {{ partial "post-tags" . }}
-    {{ partial "post-categories" . }}
-    <hr>
+  <h1 class="blog-post-title">
+    <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+  </h1>
+  {{ partial "post-date" . }}
+  {{ partial "post-tags" . }}
+  {{ partial "post-categories" . }}
+  <hr>
 </header>
 <article class="blog-post">
     {{ .Content }}
