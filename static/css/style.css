@@ -18,8 +18,14 @@ body {
   text-align: center
 }
 
+#site-header {
+  margin-bottom: 4rem;
+}
+main > :first-child, main > :first-child h2.blog-post-title, h1.blog-post-title {
+  margin-top: 0;
+}
 .blog-summary {
-  margin: 6rem 0 3rem 0;
+  margin: 4rem 0 3rem 0;
 }
 a:hover {
   border: none;
