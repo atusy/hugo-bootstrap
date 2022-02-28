@@ -1,3 +1,9 @@
+:root {
+  --main-width: calc(100rem);
+  --sidebar-width: calc(30rem);
+  --grid-gap: 3rem;
+  --grid-width: calc(var(--main-width) + var(--sidebar-width) + var(--grid-gap))
+}
 html {
   font-family: 'IBM Plex Sans JP', sans-serif;
   font-weight: 450;
@@ -6,7 +12,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 body {
-  max-width: 56em; 
+  max-width: var(--main-width); 
 }
 .justify-content-center {
   text-align: center
@@ -77,5 +83,31 @@ a.page-link {
 @media print {
   #site-sidebar, #site-footer {
     display: none;
+  }
+}
+
+
+@media screen and (min-width: calc(133rem / 1.5)) {
+  body {
+    max-width: var(--grid-width);
+    padding: 13px 0;
+    display: grid;
+    grid-template-areas: "head head" "main side" "foot side";
+    grid-template-columns: var(--main-width) var(--sidebar-width);
+    grid-template-rows: auto auto 1fr;
+    grid-column-gap: var(--grid-gap);
+  }
+  #site-header {
+    width: var(--grid-width);
+    grid-area: head;
+  }
+  main {
+    grid-area: main;
+  }
+  #site-footer {
+    grid-area: foot
+  }
+  #site-sidebar {
+    grid-area: side;
   }
 }
