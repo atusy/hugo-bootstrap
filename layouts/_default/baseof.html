@@ -13,7 +13,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="{{ .Site.BaseURL }}css/style.css" rel="stylesheet">
+    <link href="{{ relURL "css/style.css" }}" rel="stylesheet">
 
     {{ with .OutputFormats.Get "RSS" }}
     <link href={{ .RelPermalink }} rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
