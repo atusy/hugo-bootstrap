@@ -5,7 +5,10 @@ body {
   text-align: center
 }
 
-#site-header a, .blog-summary a, h2.blog-post-title a {
+#site-header a,
+#site-sidebar a,
+.blog-summary a,
+h2.blog-post-title a {
   color: inherit;
 }
 #site-header img {
@@ -21,10 +24,6 @@ h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
 
 #TOC {
   margin: 3rem;
-}
-
-aside.sidebar a {
-  color: inherit
 }
 
 footer nav, .blog-pagination {
@@ -58,7 +57,7 @@ a.page-link {
 }
 
 @media print {
-  aside.sidebar, footer {
+  #site-sidebar, #site-footer {
     display: none;
   }
 }

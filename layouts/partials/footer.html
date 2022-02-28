@@ -1,6 +1,6 @@
 {{ $thanks := i18n "thanks" | safeHTML }}
 {{ $copyright := default $thanks .Site.Copyright }}
-<footer class="blog-footer w-100">
+<footer id="site-footer">
   {{ if $copyright }}
     <p>{{ $copyright }}</p>
   {{end}}
