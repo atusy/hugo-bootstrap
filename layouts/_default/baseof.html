@@ -12,7 +12,9 @@
     </title>
 
     {{ $sakura := resources.Get "css/sakura.scss" | resources.ToCSS (dict "outputStyle" "compressed"  "enableSourceMap" true ) | resources.Fingerprint }}
+    {{ $font := resources.Get "css/font.scss" | resources.ToCSS (dict "outputStyle" "compressed"  "enableSourceMap" true ) | resources.Fingerprint }}
     <link href="{{ $sakura.Permalink | relURL }}" rel="stylesheet">
+    <link href="{{ $font.Permalink | relURL }}" rel="stylesheet" media="print" onload="this.media='all'">
 
     {{ with .OutputFormats.Get "RSS" }}
     <link href={{ .RelPermalink }} rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
