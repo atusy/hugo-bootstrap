@@ -6,14 +6,13 @@
     <link rel="canonical" href="{{ .Permalink }}">
 
     <title>
-      {{ block "title" . }}
+      {{- block "title" . -}}
         {{ .Title}}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}
-      {{ end }}
+      {{- end -}}
     </title>
 
-    <link href="{{ "css/sakura.css" | relURL }}" rel="stylesheet">
-    <link href="{{ "css/ibm-plex-sans-jp.min.css" | relURL }}" rel="stylesheet">
-    <link href="{{ "css/sakura2.css" | relURL }}" rel="stylesheet">
+    {{ $sakura := resources.Get "css/sakura.scss" | resources.ToCSS (dict "outputStyle" "compressed"  "enableSourceMap" true ) }}
+    <link href="{{ $sakura.Permalink | relURL }}" rel="stylesheet">
 
     {{ with .OutputFormats.Get "RSS" }}
     <link href={{ .RelPermalink }} rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
