@@ -12,9 +12,9 @@
     </title>
 
     {{ $sakura := resources.Get "css/sakura.scss" | resources.ToCSS (dict "outputStyle" "compressed"  "enableSourceMap" true ) | resources.Fingerprint }}
-    {{ $plex := resources.Get "css/ibm-plex-sans-jp/index.scss" | resources.ToCSS (dict "outputStyle" "compressed"  "enableSourceMap" true ) | resources.Fingerprint }}
+    {{ $font := resources.Get "css/font.scss" | resources.ToCSS (dict "outputStyle" "compressed"  "enableSourceMap" true ) | resources.Fingerprint }}
     <link href="{{ $sakura.Permalink | relURL }}" rel="stylesheet">
-    <link href="{{ $plex.Permalink | relURL }}" as="style" rel="preload">
+    <link href="{{ $font.Permalink | relURL }}" as="style" rel="preload">
 
     {{ with .OutputFormats.Get "RSS" }}
     <link href={{ .RelPermalink }} rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
