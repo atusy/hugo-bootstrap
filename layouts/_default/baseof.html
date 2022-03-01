@@ -13,6 +13,10 @@
 
     {{ $sakura := resources.Get "css/sakura.scss" | resources.ToCSS (dict "outputStyle" "compressed"  "enableSourceMap" true ) | resources.Fingerprint }}
     {{ $font := resources.Get "css/font.scss" | resources.ToCSS (dict "outputStyle" "compressed"  "enableSourceMap" true ) | resources.Fingerprint }}
+
+    <link rel="preload" href="/IBM-Plex-Sans-JP/fonts/complete/woff2/hinted/IBMPlexSansJP-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/IBM-Plex-Sans-JP/fonts/complete/woff2/hinted/IBMPlexSansJP-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/IBM-Plex-Sans-JP/fonts/complete/woff2/hinted/IBMPlexSansJP-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link href="{{ $sakura.Permalink | relURL }}" rel="stylesheet">
     <link href="{{ $font.Permalink | relURL }}" rel="stylesheet" media="print" onload="this.media='all'">
 
