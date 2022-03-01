@@ -1,0 +1,28 @@
+$font-prefix: '..' !default;
+@font-face {font-display: swap;
+  font-family: 'IBM Plex Sans JP';
+  font-style: normal;
+  font-weight: 700;
+  src: local('IBM Plex Sans JP Bold'),
+    local('IBMPlexSansJP-Bold'),
+    url('#{$font-prefix}/IBM-Plex-Sans-JP/fonts/complete/woff2/hinted/IBMPlexSansJP-Bold.woff2') format('woff2'),
+    url('#{$font-prefix}/IBM-Plex-Sans-JP/fonts/complete/woff/hinted/IBMPlexSansJP-Bold.woff') format('woff');
+}
+@font-face {font-display: swap;
+  font-family: 'IBM Plex Sans JP';
+  font-style: normal;
+  font-weight: 400;
+  src: local('IBM Plex Sans JP'),
+    local('IBMPlexSansJP'),
+    url('#{$font-prefix}/IBM-Plex-Sans-JP/fonts/complete/woff2/hinted/IBMPlexSansJP-Regular.woff2') format('woff2'),
+    url('#{$font-prefix}/IBM-Plex-Sans-JP/fonts/complete/woff/hinted/IBMPlexSansJP-Regular.woff') format('woff');
+}
+@font-face {font-display: swap;
+  font-family: 'IBM Plex Sans JP';
+  font-style: normal;
+  font-weight: 500;
+  src: local('IBM Plex Sans JP Medm'),
+    local('IBMPlexSansJP-Medm'),
+    url('#{$font-prefix}/IBM-Plex-Sans-JP/fonts/complete/woff2/hinted/IBMPlexSansJP-Medium.woff2') format('woff2'),
+    url('#{$font-prefix}/IBM-Plex-Sans-JP/fonts/complete/woff/hinted/IBMPlexSansJP-Medium.woff') format('woff');
+}
