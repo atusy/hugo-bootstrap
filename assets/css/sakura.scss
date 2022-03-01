@@ -16,6 +16,5 @@ $width-gap: 3rem;
 $width-grid: $width-main + $width-side + $width-gap;
 $min-width-screen: $width-grid / 1.5 ;
 
-@import "ibm-plex-sans-jp/index.scss";
 @import "main";
 @import "custom";
