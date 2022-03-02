@@ -1,6 +1,6 @@
 <header id="site-header"> 
   <h1>
-  {{$BASE := .Site.BaseURL | relLangURL}}
+  {{ $BASE := .Site.BaseURL | absLangURL }}
   <a href="{{ relref . $BASE }}" title="{{ default "Top Page" .Site.Title }}">
     {{ partial "brand" . }}
   {{ .Site.Title }}
