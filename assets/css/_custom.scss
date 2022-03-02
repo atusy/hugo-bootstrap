@@ -1,3 +1,6 @@
+body {
+  max-width: $width-main; 
+}
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   code {
@@ -6,8 +9,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
   };
 }
-body {
-  max-width: $width-main; 
+code {
+  font-family: $font-family-code;
 }
 .justify-content-center {
   text-align: center
