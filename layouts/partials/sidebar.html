@@ -12,7 +12,6 @@
 
 <details><summary><h4>リンク</h4></summary>
   <ul>
-    {{ $url := .URL | relLangURL }}
     {{ range .Site.Menus.main }}
     <li>
       {{ if eq (hasPrefix .URL "mailto:") true }}
