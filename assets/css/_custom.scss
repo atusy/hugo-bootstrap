@@ -22,7 +22,11 @@ table {
 }
 
 #site-header {
-  margin-bottom: 4rem;
+  position: relative;
+  margin: 3rem 0 4rem 0;
+  h1 {
+    margin: 0;
+  }
   img {
     margin: 0;
     width: 1.2em;
@@ -41,7 +45,6 @@ a:hover {
   text-decoration-thickness: 2px;
 }
 #site-header, #site-sidebar, .blog-summary, h2.blog-post-title {
-  position: relative;
   a {
     color: inherit;
   }
@@ -54,7 +57,7 @@ p img {
   background-color: $color-bg;
   position: absolute;
   right: 0;
-  top: 0;
+  top: -2rem;
   summary {
     display: block;
     text-align: right;
