@@ -1,4 +1,0 @@
-{{ $LOGO := resources.Get "images/logo.jpg" }}
-{{- if ne $LOGO nil -}}
-<img src="{{ $LOGO.RelPermalink }}" alt="Logo of {{ .Site.Title }}">
-{{- end -}}

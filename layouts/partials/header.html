@@ -1,8 +1,12 @@
+{{- $URL := .Site.BaseURL | absLangURL -}}
+{{- $LOGO := resources.Get "images/logo.jpg" -}}
 <header id="site-header"> 
   <h1>
-  {{ $BASE := .Site.BaseURL | absLangURL }}
-  <a href="{{ relref . $BASE }}" title="{{ default "Top Page" .Site.Title }}">
-    {{ partial "brand" . }} {{ .Site.Title }}
+  <a href="{{ relref . $URL }}" title="{{ default "Top Page" .Site.Title }}">
+    {{ if ne $LOGO nil -}}
+    <img src="{{ $LOGO.RelPermalink }}" alt="Logo of {{ .Site.Title }}">
+    {{- end }}
+    {{ .Site.Title }}
   </a>
   </h1>
 </header>
