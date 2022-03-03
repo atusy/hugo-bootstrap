@@ -27,3 +27,6 @@
 
 - id: publications
   translation: "Publications"
+
+- id: share
+  translation: "Share"

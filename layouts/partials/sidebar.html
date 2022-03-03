@@ -1,6 +1,4 @@
-{{ if default true .Site.Params.sidebar.showShare }}
-    {{ partial "share" . }}
-{{ end }}
+{{ partial "sidebar-share" . }}
 
 <details open><summary><h4>{{ i18n "publications" }}</h4></summary>
 <p>
@@ -11,13 +9,13 @@
 </details>
 
 {{ if .IsPage }}
-    {{ partial "related" . }}
+    {{ partial "sidebar-related" . }}
     {{ if default true .Site.Params.sidebar.showRecent }}
-        {{ partial "recent" . }}
+        {{ partial "sidebar-recent" . }}
     {{ end }}
 {{ else }}
     {{ if default true .Site.Params.sidebar.showTaxonomy }}
-        {{ partial "taxonomies" . }}
+        {{ partial "sidebar-taxonomies" . }}
     {{ end }}
     {{ if and (.IsHome) (gt (len .Site.Home.AllTranslations) 1) }}
     <details><summary><h4>{{ i18n "language" }}</h4></summary>
@@ -30,7 +28,7 @@
     {{ end }}
 {{ end }}
 
-{{ partial "links" . }}
+{{ partial "sidebar-links" . }}
 
 <hr>
 
