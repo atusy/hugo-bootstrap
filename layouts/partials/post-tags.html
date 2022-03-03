@@ -1,8 +1,10 @@
 {{ if .Params.tags }}
-<div>
-    <strong>{{ i18n "tags" }}:</strong>
+<div class="blog-post-taxonomies tags">
+    {{ i18n "tags" }}:
+    <ul>
     {{ range .Params.tags }}
-        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+        <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
     {{ end }}
+    </ul>
 </div>
 {{ end }}
