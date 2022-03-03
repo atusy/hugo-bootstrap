@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   code {
     font: inherit;
-    background-color: inherit;
+    background-color:inherit;
     padding: 0;
   };
 }
@@ -41,6 +41,7 @@ a:hover {
   text-decoration-thickness: 2px;
 }
 #site-header, #site-sidebar, .blog-summary, h2.blog-post-title {
+  position: relative;
   a {
     color: inherit;
   }
@@ -49,6 +50,28 @@ p img {
   margin: 0;
 }
 
+#translations {
+  background-color: $color-bg;
+  position: absolute;
+  right: 0;
+  top: 0;
+  summary {
+    display: block;
+    text-align: right;
+    width: auto;
+    margin: auto;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+    margin: 0;
+  }
+}
 #TOC {
   margin: 3rem;
 }
