@@ -2,8 +2,7 @@
   <h1>
   {{ $BASE := .Site.BaseURL | absLangURL }}
   <a href="{{ relref . $BASE }}" title="{{ default "Top Page" .Site.Title }}">
-    {{ partial "brand" . }}
-  {{ .Site.Title }}
+    {{ partial "brand" . }} {{ .Site.Title }}
   </a>
   </h1>
 </header>
