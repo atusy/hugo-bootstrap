@@ -1,0 +1,9 @@
+{{- if and (.IsHome) (gt (len .Site.Home.AllTranslations) 1) -}}
+<details><summary><h4>{{ i18n "language" }}</h4></summary>
+<ul>
+  {{ range .Site.Home.AllTranslations -}}
+  <li><a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a></li>
+  {{ end }}
+</ul>
+</details>
+{{- end -}}

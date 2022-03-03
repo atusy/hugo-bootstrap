@@ -1,0 +1,5 @@
+{{ $PRIVACY := .Site.GetPage "/privacy-policy" }}
+{{ with $PRIVACY }}
+<hr>
+<p><a href="{{ $PRIVACY.Permalink | relLangURL }}">Privacy policy</a></p>
+{{ end }}

@@ -1,3 +1,4 @@
+{{- $sakura := resources.Get "css/sakura.scss" | resources.ToCSS (dict "outputStyle" "compressed"  "enableSourceMap" true ) | resources.Fingerprint -}}
 <!doctype html>
 <html lang="{{ .Lang }}">
   <head>
@@ -11,7 +12,6 @@
       {{- end -}}
     </title>
 
-    {{ $sakura := resources.Get "css/sakura.scss" | resources.ToCSS (dict "outputStyle" "compressed"  "enableSourceMap" true ) | resources.Fingerprint }}
     <link href="{{ $sakura.RelPermalink }}" rel="stylesheet">
 
     {{ with .OutputFormats.Get "RSS" }}
@@ -32,14 +32,16 @@
       {{ block "main" . }}
       {{ end }}
     </main>
+    {{ end }}
+
+    {{ block "sidebar" . }}
     <aside id="site-sidebar">
-      {{ partial "sidebar.html" . }}
+      {{ partial "sidebar" . }}
     </aside>
     {{ end }}
 
     {{ block "footer" . }}
       {{ partial "footer" . }}
     {{ end }}
-
   </body>
 </html>
