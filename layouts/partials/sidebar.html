@@ -2,7 +2,7 @@
     {{ partial "share" . }}
 {{ end }}
 
-<details open><summary><h4>著書</h4></summary>
+<details open><summary><h4>{{ i18n "publications" }}</h4></summary>
 <p>
 <a href="https://gihyo.jp/book/2022/978-4-297-12524-0" target="_blank">
 <img src="https://gihyo.jp/assets/images/cover/2022/thumb/TH320_9784297125240.jpg">
@@ -10,27 +10,11 @@
 </p>
 </details>
 
-<details><summary><h4>リンク</h4></summary>
-  <ul>
-    {{ range .Site.Menus.main }}
-    <li>
-      {{ if eq (hasPrefix .URL "mailto:") true }}
-        <a href="{{ .URL }}">{{ .Name }}</a>
-      {{ else }}
-        <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
-      {{ end }}
-    </li>
-    {{ end }}
-  </ul>
-</details>
-
-{{ if default true .Site.Params.sidebar.showRecent }}
-    {{ partial "recent" . }}
-{{ end }}
-
-
 {{ if .IsPage }}
     {{ partial "related" . }}
+    {{ if default true .Site.Params.sidebar.showRecent }}
+        {{ partial "recent" . }}
+    {{ end }}
 {{ else }}
     {{ if default true .Site.Params.sidebar.showTaxonomy }}
         {{ partial "taxonomies" . }}
@@ -44,8 +28,12 @@
     </ul>
     </details>
     {{ end }}
-    <hr>
-    <p>
-      <a href="/privacy-policy/">Privacy policy</a>
-    </p>
 {{ end }}
+
+{{ partial "links" . }}
+
+<hr>
+
+<p>
+  <a href="/privacy-policy/">Privacy policy</a>
+</p>

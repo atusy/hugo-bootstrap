@@ -7,9 +7,6 @@
 - id: categories
   translation: "カテゴリ"
 
-- id: readMore
-  translation: "読む →"
-
 - id: translations
   translation: "Translations"
 
@@ -24,3 +21,9 @@
 
 - id: language
   translation: "Language"
+
+- id: links
+  translation: "リンク"
+
+- id: publications
+  translation: "著書"
