@@ -11,8 +11,4 @@
   </nav>
 </footer>
 
-{{ if or (.IsHome) ($.Param "math") }}
-  {{ partial "footer-math" . }}
-{{ end }}
-
 {{ partial "footer-highlightjs" . }}

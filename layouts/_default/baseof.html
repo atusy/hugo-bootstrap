@@ -18,6 +18,10 @@
     <link href={{ .RelPermalink }} rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
     {{ end }}
 
+    {{ if or (.IsHome) ($.Param "math") }}
+      {{ partial "head-math" . }}
+    {{ end }}
+
     {{ partial "head-custom.html" . }}
 
     {{ template "_internal/google_analytics_async.html" . }}
