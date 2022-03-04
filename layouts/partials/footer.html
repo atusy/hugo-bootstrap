@@ -1,12 +1,8 @@
 {{ $thanks := i18n "thanks" | safeHTML }}
 {{ $copyright := default $thanks .Site.Copyright }}
-<footer id="site-footer">
-  {{ if $copyright }}
-    <p>{{ $copyright }}</p>
-  {{end}}
-  <nav class="justify-content-center">
-    <ul>
-      <li><a href="#">{{ i18n "backToTop" }}</a></li>
-    </ul>
-  </nav>
-</footer>
+{{ if $copyright }}<p>{{ $copyright }}</p>{{end}}
+<nav class="justify-content-center">
+  <ul>
+    <li><a href="#">{{ i18n "backToTop" }}</a></li>
+  </ul>
+</nav>

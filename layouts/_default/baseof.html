@@ -28,25 +28,17 @@
     {{ template "_internal/google_analytics_async.html" . }}
   </head>
   <body>
-    {{ block "header" . }}
-      {{ partial "header" . }}
-    {{ end }}
-
-    {{ block "body" . }}
+    <header id="site-header"> 
+    {{ partial "header" . }}
+    </header>
     <main>
-      {{ block "main" . }}
-      {{ end }}
+      {{ block "main" . }}{{ end }}
     </main>
-    {{ end }}
-
-    {{ block "sidebar" . }}
     <aside id="site-sidebar">
       {{ partial "sidebar" . }}
     </aside>
-    {{ end }}
-
-    {{ block "footer" . }}
+    <footer id="site-footer">
       {{ partial "footer" . }}
-    {{ end }}
+    </footer>
   </body>
 </html>
