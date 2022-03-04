@@ -1,10 +1,16 @@
-{{ define "main"}}
+{{ define "head" }}
+<link rel="canonical" href="{{ .Permalink }}">
+<title>{{ .Site.Title }}</title>
+{{ end }}
 
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title">Page Not Found</h2>
-  </header>
-  <p>Page not found. Go back <a href="{{ "/" | relLangURL }}">home</a>.</p>
-</article>
-
+{{ define "body" }}
+<main style="text-align: center;">
+<h1>404 Page Not Found</h1>
+<h2>Go back to home</h2>
+<nav><ul style="list-style: none; padding: 0;">
+  {{ range .Site.Home.AllTranslations -}}
+  <li style="margin: 0.5rem;"><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+  {{ end }}
+</ul></nav>
+</main>
 {{ end }}
