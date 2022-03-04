@@ -1,16 +1,11 @@
-{{ define "head" }}
-<link rel="canonical" href="{{ .Permalink }}">
-<title>{{ .Site.Title }}</title>
+{{ define "title" }}
+Page Not Found | {{ .Site.Title }}
+{{ end }}
+{{ define "head-meta-extra" }}
+<meta name="robots" content="noindex">
 {{ end }}
 
-{{ define "body" }}
-<main style="text-align: center;">
+{{ define "main" }}
 <h1>404 Page Not Found</h1>
-<h2>Go back to home</h2>
-<nav><ul style="list-style: none; padding: 0;">
-  {{ range .Site.Home.AllTranslations -}}
-  <li style="margin: 0.5rem;"><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
-  {{ end }}
-</ul></nav>
-</main>
+<p style="font-size: 2em">Go back to <a href="{{ .Permalink }}">Home</a><p>
 {{ end }}
