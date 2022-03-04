@@ -1,15 +1,14 @@
 {{ $hljs_cdn := default "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/" .Site.Params.highlightjs.cdn }}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+<script defer src="{{ $hljs_cdn }}highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+<script defer src="{{ $hljs_cdn }}languages/r.min.js" integrity="sha256-XrZQp+ZMfovqr6Hb2M6okHvSEYaB/+Xbx7toWmOOZUM=" crossorigin="anonymous"></script>
 
-<script src="{{ $hljs_cdn }}highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
-<script src="{{ $hljs_cdn }}languages/r.min.js" integrity="sha256-XrZQp+ZMfovqr6Hb2M6okHvSEYaB/+Xbx7toWmOOZUM=" crossorigin="anonymous"></script>
-
-{{ with $.Param "highlightjs"}}
-  {{ range $.Param "highlightjs" }}
-    <script src="{{ $hljs_cdn }}languages/{{ . }}.min.js" crossorigin="anonymous"></script>
-  {{ end }}
-{{ end }}
-
+{{- with $.Param "highlightjs" -}}{{- range $.Param "highlightjs" -}}
+<script defer src="{{ $hljs_cdn }}languages/{{ . }}.min.js" crossorigin="anonymous"></script>
+{{- end -}}{{- end }}
 <script>
+document.addEventListener("DOMContentLoaded", function() {
   hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
+  hljs.initHighlighting();
+});
 </script>
