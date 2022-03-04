@@ -1,7 +1,8 @@
-{{- $sakura := resources.Get "css/sakura.scss" | resources.ToCSS (dict "outputStyle" "compressed"  "enableSourceMap" true ) | resources.Fingerprint -}}
 <!doctype html>
 <html lang="{{ .Lang }}">
   <head>
+  {{ block "head" . }}
+    {{- $sakura := resources.Get "css/sakura.scss" | resources.ToCSS (dict "outputStyle" "compressed"  "enableSourceMap" true ) | resources.Fingerprint -}}
     {{ partial "head-meta" . }}
 
     <link rel="canonical" href="{{ .Permalink }}">
@@ -23,19 +24,22 @@
     {{ partial "head-custom.html" . }}
 
     {{ template "_internal/google_analytics_async.html" . }}
+  {{ end }}
   </head>
   <body>
+    {{ block "body" . }}
     <header id="site-header"> 
-    {{ partial "header" . }}
+    {{ block "header" . }}{{ partial "header" . }}{{ end }}
     </header>
     <main>
       {{ block "main" . }}{{ end }}
     </main>
     <aside id="site-sidebar">
-      {{ partial "sidebar" . }}
+      {{ block "sidebar" . }}{{ partial "sidebar" . }}{{ end }}
     </aside>
     <footer id="site-footer">
-      {{ partial "footer" . }}
+      {{ block "footer" . }}{{ partial "footer" . }}{{end}}
     </footer>
+    {{ end }}
   </body>
 </html>
