@@ -12,7 +12,7 @@
       {{- end -}}
     </title>
 
-    {{- $sakura := resources.Get "css/sakura.scss" | resources.ToCSS (dict "outputStyle" "compressed"  "enableSourceMap" true ) | resources.Fingerprint -}}
+    {{- $sakura := resources.Get "css/sakura.scss" | css.Sass (dict "outputStyle" "compressed"  "enableSourceMap" true ) | resources.Fingerprint -}}
     {{ if eq .Page.RelPermalink ("/404.html" | relLangURL ) }}
     <link href="{{ $sakura.Permalink }}" rel="stylesheet">
     {{ else }}
